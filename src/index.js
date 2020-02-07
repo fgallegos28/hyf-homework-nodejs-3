@@ -1,8 +1,14 @@
 var express = require('express');
 var app = express();
 
+const users = [];
+
 app.get('/', function (req, res) {
   res.send('Hello World!');
+});
+
+app.get('/users', function(req, res){
+    res.send(users.push());
 });
 
 app.listen(3000, function () {
